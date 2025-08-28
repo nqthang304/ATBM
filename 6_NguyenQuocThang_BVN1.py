@@ -27,15 +27,15 @@ dict_Apha = {
                 25: "Z"
             }
              
-secret_ket=6
+secret_key=6
 name="Nguyen Quoc Thang"
 result=""
 
 for i in name.upper():
     for j in dict_Apha:
         if i==dict_Apha[j]:
-            if j+secret_ket>25:
-                result+=dict_Apha[(j+secret_ket)%26]
+            if j+secret_key>25:
+                result+=dict_Apha[(j+secret_key)%26]
             else:
-                result+=dict_Apha[j+secret_ket] 
+                result+=dict_Apha[j+secret_key] 
 print(result)
