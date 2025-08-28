@@ -21,7 +21,7 @@ dict_Apha = {
                 19: "T",
                 20: "U",
                 21: "V",
-                22: "W",
+                22: "W", 
                 23: "X",
                 24: "Y",
                 25: "Z"
@@ -32,10 +32,13 @@ name="Nguyen Quoc Thang"
 result=""
 
 for i in name.upper():
-    for j in dict_Apha:
-        if i==dict_Apha[j]:
-            if j+secret_key>25:
-                result+=dict_Apha[(j+secret_key)%26]
-            else:
-                result+=dict_Apha[j+secret_key] 
+    if i==" ":
+        result+=" "
+    else:
+        for j in dict_Apha:
+            if i==dict_Apha[j]:
+                if j+secret_key>25:
+                    result+=dict_Apha[(j+secret_key)%26]
+                else:
+                    result+=dict_Apha[j+secret_key] 
 print(result)
