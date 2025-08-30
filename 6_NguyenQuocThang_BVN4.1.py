@@ -27,18 +27,18 @@ dict_Apha = {
                 25: "Z"
             }
              
-secret_key=6
-name="Nguyen Quoc Thang"
-result=""
+k=6
+Plaintext="Nguyen Quoc Thang"
+Ciphertext=""
 
-for i in name.upper():
+for i in Plaintext.upper():
     if i==" ":
-        result+=" "
+        Ciphertext+=" "
     else:
         for j in dict_Apha:
             if i==dict_Apha[j]:
-                if j+secret_key>25:
-                    result+=dict_Apha[(j+secret_key)%26]
+                if j+k>25:
+                    Ciphertext+=dict_Apha[(j+k)%26]
                 else:
-                    result+=dict_Apha[j+secret_key] 
-print(result)
+                    Ciphertext+=dict_Apha[j+k] 
+print(Ciphertext)
